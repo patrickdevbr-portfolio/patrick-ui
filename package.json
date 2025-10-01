@@ -15,16 +15,13 @@
     "homepage": "https://github.com/patrickdevbr-portfolio/patrick-ui#readme",
     "private": true,
     "devDependencies": {
-        "pnpm": "^8.0.0",
-        "typescript": "^5.0.0",
-        "tsup": "^6.0.0",
-        "vite": "^5.0.0"
+        "pnpm": "^8.0.0"
     },
     "scripts": {
-        "dev:react": "pnpm --filter react dev",
-        "dev:vue": "pnpm --filter vue dev",
-        "dev:angular": "pnpm --filter angular start",
+        "dev:react": "pnpm --filter example-react dev",
+        "dev:vue": "pnpm --filter example-vue dev",
         "build": "pnpm -r --if-present build",
+        "build:packages": "pnpm --filter vue --filter react build -w",
         "bootstrap": "pnpm install && pnpm -w -r build"
     }
 }
