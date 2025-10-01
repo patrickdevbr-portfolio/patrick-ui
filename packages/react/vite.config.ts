@@ -9,7 +9,11 @@ export default defineConfig({
   plugins: [
     react(),
     vanillaExtractPlugin({ identifiers: ({ hash }) => `patrick-ui_${hash}` }),
-    dts({ tsconfigPath: "./tsconfig.app.json", outDir: 'dist/@types' }),
+    dts({
+      tsconfigPath: "./tsconfig.app.json",
+      outDir: "dist/@types",
+      entryRoot: "./src",
+    }),
   ],
   resolve: {
     alias: {
@@ -28,10 +32,10 @@ export default defineConfig({
       },
     },
     lib: {
-      entry: path.resolve(__dirname, "src/main.ts"),
-      name: 'PatrickUI',
+      entry: path.resolve(__dirname, "src/index.ts"),
+      name: "PatrickUI",
       fileName: "index",
-      formats: ["es", 'cjs'],
+      formats: ["es"],
     },
   },
 });

@@ -8,7 +8,6 @@ export const button = recipe({
     borderRadius: "6px",
     fontWeight: 500,
     cursor: "pointer",
-
     transition: "background-color 0.2s ease",
 
     selectors: {
