@@ -1,4 +1,5 @@
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
+import dts from "vite-plugin-dts";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import path from "path";
@@ -8,6 +9,7 @@ export default defineConfig({
   plugins: [
     react(),
     vanillaExtractPlugin({ identifiers: ({ hash }) => `patrick-ui_${hash}` }),
+    dts({ tsconfigPath: "./tsconfig.app.json", outDir: 'dist/@types' }),
   ],
   resolve: {
     alias: {
@@ -27,8 +29,9 @@ export default defineConfig({
     },
     lib: {
       entry: path.resolve(__dirname, "src/main.ts"),
-      fileName: "patrick-ui",
-      formats: ["es"],
+      name: 'PatrickUI',
+      fileName: "index",
+      formats: ["es", 'cjs'],
     },
   },
 });

@@ -1,5 +1,18 @@
 {
-    "name": "patrick-ui",
+    "name": "@patrick-ui/patrick-ui",
+    "directories": {
+        "example": "examples"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/patrickdevbr-portfolio/patrick-ui.git"
+    },
+    "author": "https://github.com/patrickdevbr",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/patrickdevbr-portfolio/patrick-ui/issues"
+    },
+    "homepage": "https://github.com/patrickdevbr-portfolio/patrick-ui#readme",
     "private": true,
     "devDependencies": {
         "pnpm": "^8.0.0",
