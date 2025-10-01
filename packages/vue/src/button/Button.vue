@@ -13,6 +13,6 @@ const className = ref(styles.button({ primary: props.primary }))
 
 <template>
     <button :class="className">
-        <Child />
+        <slot></slot>
     </button>
 </template>
