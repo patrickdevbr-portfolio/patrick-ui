@@ -1,0 +1,17 @@
+{
+    "name": "patrick-ui",
+    "private": true,
+    "devDependencies": {
+        "pnpm": "^8.0.0",
+        "typescript": "^5.0.0",
+        "tsup": "^6.0.0",
+        "vite": "^5.0.0"
+    },
+    "scripts": {
+        "dev:react": "pnpm --filter react dev",
+        "dev:vue": "pnpm --filter vue dev",
+        "dev:angular": "pnpm --filter angular start",
+        "build": "pnpm -r --if-present build",
+        "bootstrap": "pnpm install && pnpm -w -r build"
+    }
+}
