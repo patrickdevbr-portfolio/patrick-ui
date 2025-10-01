@@ -4,7 +4,7 @@ import "@patrick-ui/react/styles.css";
 export default function App() {
   return (
     <PatrickUIProvider>
-      <Button variant="primary">Eu sou um botão</Button>
+      <Button>Eu sou um botão React.js</Button>
     </PatrickUIProvider>
   );
 }
