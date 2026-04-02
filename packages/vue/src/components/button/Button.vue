@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import * as styles from "@patrick-ui/core/button/button.css";
-import { computed, defineProps } from 'vue';
+import { computed } from 'vue';
 
 interface ButtonProps {
-    primary?: boolean
+    variant?: "link" | "default" | "outline" | "destructive" | "secondary" | "ghost"
 }
 
 const props = defineProps<ButtonProps>()
-const className = computed(() => styles.button({ primary: props.primary }))
+const className = computed(() => styles.button({ variant: props.variant }))
 </script>
 
 <template>

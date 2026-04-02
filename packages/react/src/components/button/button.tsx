@@ -1,20 +1,23 @@
+import type { ButtonVariants } from "@patrick-ui/core/button/button.css";
 import * as styles from "@patrick-ui/core/button/button.css";
-import React from "react";
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary";
-}
+import {
+  Button as BaseButton,
+  type ButtonProps as BaseButtonProps,
+} from "@base-ui/react/button";
+
+export type ButtonProps = BaseButtonProps & ButtonVariants;
 
 export const Button: React.FC<ButtonProps> = ({
   children,
-  variant = "primary",
+  variant,
+  size,
   ...props
 }) => {
   return (
-    <button className={styles.button({ primary: true })} {...props}>
+    <BaseButton className={styles.button({ variant, size })} {...props}>
       {children}
-    </button>
+    </BaseButton>
   );
 };
 
